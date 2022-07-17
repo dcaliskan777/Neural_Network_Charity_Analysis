@@ -8,17 +8,28 @@ By the knowledge of machine learning and neural networks, I willl use the featur
 
 The CSV file contains more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset are a number of columns that capture metadata about each organization, such as the following:
 
-EIN and NAME—Identification columns
-APPLICATION_TYPE—Alphabet Soup application type
-AFFILIATION—Affiliated sector of industry
-CLASSIFICATION—Government organization classification
-USE_CASE—Use case for funding
-ORGANIZATION—Organization type
-STATUS—Active status
-INCOME_AMT—Income classification
-SPECIAL_CONSIDERATIONS—Special consideration for application
-ASK_AMT—Funding amount requested
-IS_SUCCESSFUL—Was the money used effectively
+> EIN and NAME—Identification columns
+> 
+> APPLICATION_TYPE—Alphabet Soup application type
+> 
+> AFFILIATION—Affiliated sector of industry
+> 
+> CLASSIFICATION—Government organization classification
+> 
+> USE_CASE—Use case for funding
+> 
+> ORGANIZATION—Organization type
+> 
+> STATUS—Active status
+> 
+> INCOME_AMT—Income classification
+> 
+> SPECIAL_CONSIDERATIONS—Special consideration for application
+> 
+> ASK_AMT—Funding amount requested
+> 
+> IS_SUCCESSFUL—Was the money used effectively
+> 
 
 The purpose of the work is to create a Neurel Network Model to predict the success of each record acccording to the geven features in the dataset and to optimize the model.
 
@@ -76,4 +87,24 @@ An then I merged one-hot encoded features and drop the originals by using the fo
 
 > application_df=application_df1.drop(['EIN','NAME'],axis=1)
 
+The preprocessed data is siplitted into features and target arrays by
 
+> y = application_df["IS_SUCCESSFUL"].values
+> 
+> X = application_df.drop(["IS_SUCCESSFUL"],axis=1).values
+
+The arrays are  siplitted into tarining and testing dataset by
+
+> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=78)
+
+Finally, the StandardScaler instance is created, X_train is fitted by it and X_train and X_test are scaled by
+
+>scaler = StandardScaler()
+>
+>X_scaler = scaler.fit(X_train)
+>
+>X_train_scaled = X_scaler.transform(X_train)
+>
+>X_test_scaled = X_scaler.transform(X_test)
+
+### Compiling, Training and Evaluationg the Model
