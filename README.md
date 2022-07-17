@@ -157,4 +157,4 @@ As it is seen evaluation of the model the accuracy is 57 % which is not good eno
 
 To classify success of records, a Neurel Network modal was applied, initially accuracy of 57 % was achieved, by optimizing the model: by decreasing number of values of some categorical features, by increasing number neurons of hidden layer and by increasing number of epochs; the model improved and accuracy of 66 % was achieved.
 
-Since there are two classes in the classification both the logistic regression of ML and logistic regression of Neurel Network can be applied.
+Since there are two classes in the classification, I can recommend  both the logistic regression of ML and logistic regression of Neurel Network to reach more accurate result.
