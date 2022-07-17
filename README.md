@@ -31,7 +31,7 @@ The CSV file contains more than 34,000 organizations that have received funding 
 > IS_SUCCESSFUL—Was the money used effectively
 > 
 
-The purpose of the work is to create a Neurel Network Model to predict the success of each record acccording to the geven features in the dataset and to optimize the model.
+The purpose of the work is to create a Neurel Network Model to classify the success of each record acccording to the geven features in the dataset and to optimize the model.
 
 ## Results:
 
@@ -153,3 +153,8 @@ As it is seen evaluation of the model the accuracy is 57 % which is not good eno
 
 ![](resources/final_evaluation.jpg)
 
+## Summary:
+
+To classify success of records, a Neurel Network model was applied, initially accuracy of 57 % was achieved, by optimizing the model: by decreasing number of values of some categorical features, by increasing number neurons of hidden layer and by increasing number of epochs; the model improved and accuracy of 66 % was achieved.
+
+Since there are two classes in the classification both the logistic regression of ML and logistic regression of Neurel Network can be applied.
