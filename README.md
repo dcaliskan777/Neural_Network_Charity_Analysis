@@ -56,3 +56,24 @@ For 'CLASSIFICATION'
 I decideded the boundary of the rare values to put others by using the density graph which is the following.
 
 ![](resources/density_classificarion.jpg)
+
+After the number of values raduced , the categorical features are encoded by ***OneHotEncoder*** as follows.
+
+> enc = OneHotEncoder(sparse=False)
+>
+> encode_df = pd.DataFrame(enc.fit_transform(application_df[application_cat]))
+>
+>encode_df.columns = enc.get_feature_names(application_cat)
+>
+
+An then I merged one-hot encoded features and drop the originals by using the following codes
+
+> application_df = application_df.merge(encode_df,left_index=True, right_index=True)
+>
+> application_df = application_df.drop(application_cat,axis=1)
+>
+**3.** The columns 'EIN' and "NAME' are dropped, because they do not have any effect on the success; so they are neither feature nor target. The code is the following:
+
+> application_df=application_df1.drop(['EIN','NAME'],axis=1)
+
+
