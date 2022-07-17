@@ -1,6 +1,6 @@
 # Neural_Network_Charity_Analysis
 
-This project is about an application of Neurel Network Model to a Charity Analysis.
+This project is about an application of Neural Network Model to a Charity Analysis.
 
 ## Overview:
 
@@ -31,7 +31,7 @@ The CSV file contains more than 34,000 organizations that have received funding 
 > IS_SUCCESSFUL—Was the money used effectively
 > 
 
-The purpose of the work is to create a Neurel Network Model to classify the success of each record acccording to the geven features in the dataset and to optimize the model.
+The purpose of the work is to create a Neural Network Model to classify the success of each record acccording to the geven features in the dataset and to optimize the model.
 
 ## Results:
 
@@ -149,12 +149,12 @@ As it is seen evaluation of the model the accuracy is 57 % which is not good eno
 
 **2.** After optimization I could not achieve 75 % accuracy, I achieved 66 % accuracy.
 
-**3.** To increase the model performance, first tried to additionally decrease number of values of features 'APPLICATION_TYPE' and 'CLASSIFICATION' using boundaries of "APPLICATION_TYPE.count<1000" and "CLASSIFICATION.count<2000" respectivly. It decreases the accuracy to 56 %. An then I selected number of neurons of first and second hidden layer as 90 and 35 respectively; it inceases the accuracy to 64 %. Finally I incresed the number of epochs to 150; it increases the accuracy to 66 %. The final evaluation resulst is given in the following picture.
+**3.** To increase the model performance, first tried to additionally decrease number of values of features 'APPLICATION_TYPE' and 'CLASSIFICATION' using boundaries of "APPLICATION_TYPE.count<1000" and "CLASSIFICATION.count<2000" respectively. It decreases the accuracy to 56 %. An then I selected number of neurons of first and second hidden layer as 90 and 35 respectively; it inceases the accuracy to 64 %. Finally I incresed the number of epochs to 150; it increases the accuracy to 66 %. The final evaluation resulst is given in the following picture.
 
 ![](resources/final_evaluation.jpg)
 
 ## Summary:
 
-To classify success of records, a Neurel Network model was applied, initially accuracy of 57 % was achieved, by optimizing the model: by decreasing number of values of some categorical features, by increasing number neurons of hidden layer and by increasing number of epochs; the model improved and accuracy of 66 % was achieved.
+To classify success of records, a Neurel Network modal was applied, initially accuracy of 57 % was achieved, by optimizing the model: by decreasing number of values of some categorical features, by increasing number neurons of hidden layer and by increasing number of epochs; the model improved and accuracy of 66 % was achieved.
 
 Since there are two classes in the classification both the logistic regression of ML and logistic regression of Neurel Network can be applied.
