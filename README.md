@@ -127,3 +127,20 @@ Finally, the StandardScaler instance is created, X_train is fitted by it and X_t
 >
 > nn.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))
 
+You can find the model summary in the following:
+
+![](resources/model_summary.jpg)
+
+In the training the code I have used 100 epochs, see in the following
+
+> fit_model = nn.fit(X_train,y_train,epochs=100,callbacks=[cp_callback])
+
+![](resources/train_number_of_epochs.jpg)
+
+The evaluation of the model is given by 
+
+> model_loss, model_accuracy = nn.evaluate(X_test_scaled,y_test,verbose=2)
+> 
+> print(f"Loss: {model_loss}, Accuracy: {model_accuracy}")
+
+![](resources/evaluation.jpg)
