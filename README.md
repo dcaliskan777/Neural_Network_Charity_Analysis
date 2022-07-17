@@ -107,4 +107,23 @@ Finally, the StandardScaler instance is created, X_train is fitted by it and X_t
 >
 >X_test_scaled = X_scaler.transform(X_test)
 
-### Compiling, Training and Evaluationg the Model
+### Compiling, Training and Evaluating the Model
+
+**1.** 2 hidden layers and one output layer are selected in the Neurel Network Model, in the first hidden layer 80 neurons and in the second hidden layer 30 neurons are selected. for hidden layers activation function is selected as 'relu', because numbers are all positive in features; and in the output layer the there is only one neuron and the activation function is selected as 'sigmoid' because the results are supposed to be 0 or 1. The model is defined by
+
+> number_input_features = len(X_train[0])
+> 
+> hidden_nodes_layer1 = 80
+> 
+> hidden_nodes_layer2 = 30
+>
+> nn = tf.keras.models.Sequential()
+>
+> nn.add(
+    tf.keras.layers.Dense(units=hidden_nodes_layer1, input_dim=number_input_features, activation="relu")
+)
+>
+> nn.add(tf.keras.layers.Dense(units=hidden_nodes_layer2, activation="relu"))
+>
+> nn.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))
+
