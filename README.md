@@ -144,3 +144,12 @@ The evaluation of the model is given by
 > print(f"Loss: {model_loss}, Accuracy: {model_accuracy}")
 
 ![](resources/evaluation.jpg)
+
+As it is seen evaluation of the model the accuracy is 57 % which is not good enough. 
+
+**2.** After optimization I could not achieve 75 % accuracy, I achieved 66 % accuracy.
+
+**3.** To increase the model performance, first tried to additionally decrease number of values of features 'APPLICATION_TYPE' and 'CLASSIFICATION' using boundaries of "APPLICATION_TYPE.count<1000" and "CLASSIFICATION.count<2000" respectivly. It decreases the accuracy to 56 %. An then I selected number of neurons of first and second hidden layer as 90 and 35 respectively; it inceases the accuracy to 64 %. Finally I incresed the number of epochs to 150; it increases the accuracy to 66 %. The final evaluation resulst is given in the following picture.
+
+![](resources/final_evaluation.jpg)
+
